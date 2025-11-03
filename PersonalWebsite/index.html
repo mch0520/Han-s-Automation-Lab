@@ -1,135 +1,296 @@
 <!doctype html>
 <html lang="zh-Hant">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>你的名字 — 自動化 / Unity / 網站開發工程師</title>
-<meta name="description" content="專精 Python 自動化、Unity 工具開發與快速網站製作。0 元起步接案、作品示範、範本服務及聯絡方式。" />
-<link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-<style>
-  :root{--bg:#0f1720;--card:#0b1220;--muted:#a6b0c3;--accent:#6ee7b7;--glass:rgba(255,255,255,0.03)}
-  *{box-sizing:border-box}body{margin:0;font-family:Inter, "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";background:linear-gradient(180deg,#071021 0%, #071424 100%);color:#e6eef6;line-height:1.5}
-  .container{max-width:980px;margin:40px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.7)}
-  header{display:flex;gap:16px;align-items:center}
-  .avatar{width:86px;height:86px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#052522;font-size:28px}
-  h1{margin:0;font-size:20px}
-  p.lead{margin:6px 0 0;color:var(--muted)}
-  .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
-  .card{background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  .service{background:var(--glass);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
-  .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#04221b;font-weight:600;text-decoration:none}
-  .small{font-size:13px;color:var(--muted)}
-  .portfolio-list{display:flex;flex-direction:column;gap:10px}
-  .folio{display:flex;gap:12px;align-items:center;padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
-  .folio .meta{font-size:13px;color:var(--muted)}
-  footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
-  pre{white-space:pre-wrap;background:rgba(0,0,0,0.2);padding:10px;border-radius:6px;color:#dff7ea}
-  .pricing{display:flex;gap:12px}
-  .plan{flex:1;padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
-  .contact-row{display:flex;gap:8px;flex-wrap:wrap}
-  @media(max-width:920px){.grid{grid-template-columns:1fr}.avatar{width:64px;height:64px}}
-</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>你的名字 — 自動化 / Unity / 網站開發工程師</title>
+    <meta name="description" content="專精 Python 自動化、Unity 工具開發與快速網站製作。0 元起步接案、作品示範、範本服務及聯絡方式。" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <style>
+        :root {
+            --bg: #0f1720;
+            --card: #0b1220;
+            --muted: #a6b0c3;
+            --accent: #6ee7b7;
+            --glass: rgba(255, 255, 255, 0.03)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
+            background: linear-gradient(180deg, #071021 0%, #071424 100%);
+            color: #e6eef6;
+            line-height: 1.5
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 40px auto;
+            padding: 28px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.7)
+        }
+
+        header {
+            display: flex;
+            gap: 16px;
+            align-items: center
+        }
+
+        .avatar {
+            width: 86px;
+            height: 86px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #60a5fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #052522;
+            font-size: 28px
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 20px
+        }
+
+        p.lead {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+            margin-top: 18px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.02)
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px
+        }
+
+        .service {
+            background: var(--glass);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.02)
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, var(--accent), #60a5fa);
+            color: #04221b;
+            font-weight: 600;
+            text-decoration: none
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .portfolio-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .folio {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 10px;
+            border-radius: 8px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent)
+        }
+
+        .folio .meta {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        pre {
+            white-space: pre-wrap;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 6px;
+            color: #dff7ea
+        }
+
+        .pricing {
+            display: flex;
+            gap: 12px
+        }
+
+        .plan {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent)
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        @media(max-width:920px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            .avatar {
+                width: 64px;
+                height: 64px
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container" role="main">
-    <header>
-      <div class="avatar">你</div>
-      <div>
-        <h1>你的名字 • 自動化 / Unity 工具 / 網站開發</h1>
-        <p class="lead">專精 Python 自動化、OpenCV/OCR、Unity Editor 工具與快速靜態網站。0 元起步承接小案、工具客製與教學。</p>
-        <div style="margin-top:8px" class="contact-row">
-          <a class="btn" href="#services">我要接案</a>
-          <a class="btn" href="#portfolio" style="background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)">作品</a>
-          <a class="small" href="mailto:you@example.com">you@example.com</a>
-          <a class="small" href="https://github.com/你的帳號" target="_blank" rel="noopener">GitHub</a>
-          <a class="small" href="https://www.fiverr.com/" target="_blank" rel="noopener">Fiverr</a>
-        </div>
-      </div>
-    </header>
-
-    <div class="grid">
-      <main>
-        <section id="about" class="card">
-          <h2 style="margin-top:0">簡介</h2>
-          <p class="small">我擅長將繁瑣重複工作自動化：資料抓取、表單自動化、Unity 編輯器工具、批次處理與自動測試。歡迎想省時或需工具客製的個人/工作室聯絡我。</p>
-          <div style="margin-top:12px">
-            <strong>技術快覽</strong>
-            <div class="services" style="margin-top:8px">
-              <div class="service"><strong>Python 自動化</strong><div class="small">requests, selenium, pywinauto, pyautogui, OpenCV, pytesseract</div></div>
-              <div class="service"><strong>Unity & C#</strong><div class="small">Editor scripting, EditorWindow, Tooling, Prefab 管理</div></div>
-              <div class="service"><strong>網站 / Web</strong><div class="small">HTML/CSS/JS, Flask / FastAPI, GitHub Pages</div></div>
-              <div class="service"><strong>整合服務</strong><div class="small">工具 + 網頁 + 自動化流程串接</div></div>
+    <div class="container" role="main">
+        <header>
+            <div class="avatar">你</div>
+            <div>
+                <h1>Jauson Chang • 自動化 / Unity 工具 / 網站開發</h1>
+                <p class="lead">專精 Python 自動化、OpenCV/OCR、Unity Editor 工具與快速靜態網站。0 元起步承接小案、工具客製與教學。</p>
+                <div style="margin-top:8px" class="contact-row">
+                    <a class="btn" href="#services">我要接案</a>
+                    <a class="btn" href="#portfolio"
+                        style="background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.04)">作品</a>
+                    <a class="small" href="mailto:functionkk@gmail.com">functionkk@gmail.com</a>
+                    <a class="small" href="https://github.com/mch0520" target="_blank" rel="noopener">GitHub</a>
+                    <a class="small" href="https://mch0520.github.io/Han-s-Automation-Lab/" target="_blank"
+                        rel="noopener">Fiverr</a>
+                </div>
             </div>
-          </div>
-        </section>
+        </header>
 
-        <section id="services" class="card" style="margin-top:14px">
-          <h2 style="margin-top:0">我接的服務（範例定價）</h2>
-          <div class="pricing" style="margin-top:10px">
-            <div class="plan">
-              <strong>快速腳本包（$10-$50）</strong>
-              <div class="small">像是自動化填表、資料抓取、檔案批次處理。1~3 天交付（依需求）。</div>
-            </div>
-            <div class="plan">
-              <strong>Unity 工具與插件（$80+）</strong>
-              <div class="small">Editor 小工具、批次資產處理、場景佈局工具。含簡單文件。</div>
-            </div>
-            <div class="plan">
-              <strong>小型網站 / Landing（$50+）</strong>
-              <div class="small">靜態展示頁、作品集、接案頁（含 GitHub Pages 部署指引）。</div>
-            </div>
-          </div>
+        <div class="grid">
+            <main>
+                <section id="about" class="card">
+                    <h2 style="margin-top:0">簡介</h2>
+                    <p class="small">我擅長將繁瑣重複工作自動化：資料抓取、表單自動化、Unity 編輯器工具、批次處理與自動測試。歡迎想省時或需工具客製的個人/工作室聯絡我。</p>
+                    <div style="margin-top:12px">
+                        <strong>技術快覽</strong>
+                        <div class="services" style="margin-top:8px">
+                            <div class="service"><strong>Python 自動化</strong>
+                                <div class="small">requests, selenium, pywinauto, pyautogui, OpenCV, pytesseract</div>
+                            </div>
+                            <div class="service"><strong>Unity & C#</strong>
+                                <div class="small">Editor scripting, EditorWindow, Tooling, Prefab 管理</div>
+                            </div>
+                            <div class="service"><strong>網站 / Web</strong>
+                                <div class="small">HTML/CSS/JS, Flask / FastAPI, GitHub Pages</div>
+                            </div>
+                            <div class="service"><strong>整合服務</strong>
+                                <div class="small">工具 + 網頁 + 自動化流程串接</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-          <h3 style="margin-top:12px">訂單流程（簡化）</h3>
-          <ol class="small">
-            <li>聯絡 → 確認需求（用範例、截圖）</li>
-            <li>議價與交付期限（先付半款或低價先行驗收）</li>
-            <li>交付 .zip / GitHub repo / 執行檔 + 使用說明</li>
-          </ol>
+                <section id="services" class="card" style="margin-top:14px">
+                    <h2 style="margin-top:0">我接的服務（範例定價）</h2>
+                    <div class="pricing" style="margin-top:10px">
+                        <div class="plan">
+                            <strong>快速腳本包（$10-$50）</strong>
+                            <div class="small">像是自動化填表、資料抓取、檔案批次處理。1~3 天交付（依需求）。</div>
+                        </div>
+                        <div class="plan">
+                            <strong>Unity 工具與插件（$80+）</strong>
+                            <div class="small">Editor 小工具、批次資產處理、場景佈局工具。含簡單文件。</div>
+                        </div>
+                        <div class="plan">
+                            <strong>小型網站 / Landing（$50+）</strong>
+                            <div class="small">靜態展示頁、作品集、接案頁（含 GitHub Pages 部署指引）。</div>
+                        </div>
+                    </div>
 
-          <h3 style="margin-top:12px">快速範例包</h3>
-          <pre>
+                    <h3 style="margin-top:12px">訂單流程（簡化）</h3>
+                    <ol class="small">
+                        <li>聯絡 → 確認需求（用範例、截圖）</li>
+                        <li>議價與交付期限（先付半款或低價先行驗收）</li>
+                        <li>交付 .zip / GitHub repo / 執行檔 + 使用說明</li>
+                    </ol>
+
+                    <h3 style="margin-top:12px">快速範例包</h3>
+                    <pre>
 // 範例：自動化抓圖腳本（示意）
 python fetch_images.py --query "unity editor" --limit 50
 // 範例：Unity Editor tool（示意）
 Assets/Editor/BatchRenameTool.cs
           </pre>
 
-        </section>
+                </section>
 
-        <section id="portfolio" class="card" style="margin-top:14px">
-          <h2 style="margin-top:0">作品 & 範例</h2>
-          <div class="portfolio-list">
-            <div class="folio">
-              <div style="width:64px;height:48px;background:linear-gradient(90deg,#3b82f6,#06b6d4);border-radius:6px"></div>
-              <div>
-                <div><strong>Unity Batch Prefab Renamer</strong> <span class="small">• Editor Tool</span></div>
-                <div class="meta small">功能：批次重命名 Prefab、支援正則、操作日誌。交付：GitHub repo</div>
-              </div>
-            </div>
+                <section id="portfolio" class="card" style="margin-top:14px">
+                    <h2 style="margin-top:0">作品 & 範例</h2>
+                    <div class="portfolio-list">
+                        <div class="folio">
+                            <div
+                                style="width:64px;height:48px;background:linear-gradient(90deg,#3b82f6,#06b6d4);border-radius:6px">
+                            </div>
+                            <div>
+                                <div><strong>Unity Batch Prefab Renamer</strong> <span class="small">• Editor
+                                        Tool</span></div>
+                                <div class="meta small">功能：批次重命名 Prefab、支援正則、操作日誌。交付：GitHub repo</div>
+                            </div>
+                        </div>
 
-            <div class="folio">
-              <div style="width:64px;height:48px;background:linear-gradient(90deg,#f97316,#f43f5e);border-radius:6px"></div>
-              <div>
-                <div><strong>Screen OCR Auto-Clicker</strong> <span class="small">• Python / OpenCV</span></div>
-                <div class="meta small">功能：OCR + Template 找目標並點擊。交付：.exe 或 Python package</div>
-              </div>
-            </div>
+                        <div class="folio">
+                            <div
+                                style="width:64px;height:48px;background:linear-gradient(90deg,#f97316,#f43f5e);border-radius:6px">
+                            </div>
+                            <div>
+                                <div><strong>Screen OCR Auto-Clicker</strong> <span class="small">• Python /
+                                        OpenCV</span></div>
+                                <div class="meta small">功能：OCR + Template 找目標並點擊。交付：.exe 或 Python package</div>
+                            </div>
+                        </div>
 
-            <div class="folio">
-              <div style="width:64px;height:48px;background:linear-gradient(90deg,#34d399,#60a5fa);border-radius:6px"></div>
-              <div>
-                <div><strong>Personal Portfolio</strong> <span class="small">• GitHub Pages</span></div>
-                <div class="meta small">功能：靜態頁面、聯絡表單（Formspree）、作品展示。</div>
-              </div>
-            </div>
-          </div>
-        </section>
+                        <div class="folio">
+                            <div
+                                style="width:64px;height:48px;background:linear-gradient(90deg,#34d399,#60a5fa);border-radius:6px">
+                            </div>
+                            <div>
+                                <div><strong>Personal Portfolio</strong> <span class="small">• GitHub Pages</span></div>
+                                <div class="meta small">功能：靜態頁面、聯絡表單（Formspree）、作品展示。</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="card" style="margin-top:14px">
-          <h2 style="margin-top:0">提案範本（貼到 Fiverr / Upwork）</h2>
-          <pre>
+                <section class="card" style="margin-top:14px">
+                    <h2 style="margin-top:0">提案範本（貼到 Fiverr / Upwork）</h2>
+                    <pre>
 嗨，我是【你的名字】— Python & Unity 工具開發者。
 我能在 1–3 天內為你完成：
 - 自動化腳本（抓取、表單自動填寫、批處理）
@@ -137,61 +298,55 @@ Assets/Editor/BatchRenameTool.cs
 報價：依需求 $10–$200，美金。請提供需求說明與範例畫面。
 交付：源碼 + 使用說明。先付 30% 或小案可先試做。
           </pre>
-        </section>
+                </section>
 
-      </main>
+            </main>
 
-      <aside>
-        <div class="card">
-          <h3 style="margin-top:0">聯絡 / 一鍵報價</h3>
-          <p class="small">寄信或用下方快速表單（Formspree 範例）。</p>
+            <aside>
+                <div class="card">
+                    <h3 style="margin-top:0">聯絡 / 一鍵報價</h3>
+                    <p class="small">寄信或用下方快速表單（Formspree 範例）。</p>
 
-          <!-- 使用 Formspree 無需後端：替換 action 為你的 Formspree endpoint -->
-          <form id="contactForm" action="https://formspree.io/f/your-id" method="POST">
-            <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-              <input name="name" placeholder="你的名字" required style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-              <input name="email" type="email" placeholder="email@example.com" required style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-              <input name="subject" placeholder="服務 / 快速描述" style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
-              <textarea name="message" placeholder="請簡述需求或貼截圖連結" rows="4" style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
-              <button class="btn" type="submit">送出需求</button>
-            </div>
-          </form>
+                    <form id="contactForm" action="https://formspree.io/f/xeopwpjy" method="POST">
+                        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+                            <input name="name" placeholder="你的名字" required
+                                style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+                            <input name="email" type="email" placeholder="email@example.com" required
+                                style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+                            <input name="subject" placeholder="服務 / 快速描述"
+                                style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+                            <textarea name="message" placeholder="請簡述需求或貼截圖連結" rows="4"
+                                style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+                            <button class="btn" type="submit">送出需求</button>
+                        </div>
+                    </form>
 
-          <div style="margin-top:12px">
-            <strong>快速連結</strong>
-            <div class="small" style="margin-top:6px">
-              GitHub: <a class="small" href="https://github.com/你的帳號" target="_blank" rel="noopener">你的帳號</a><br/>
-              Fiverr: <a class="small" href="https://www.fiverr.com/" target="_blank">你的頁面</a><br/>
-              範例下載: <a class="small" href="https://github.com/你的帳號/your-repo" target="_blank">Repo</a>
-            </div>
-          </div>
+                    <div style="margin-top:12px">
+                        <strong>快速連結</strong>
+                        <div class="small" style="margin-top:6px">
+                            GitHub: <a class="small" href="https://github.com/mch0520" target="_blank"
+                                rel="noopener">你的帳號</a><br />
+                            Fiverr: <a class="small" href="https://www.fiverr.com/" target="_blank">你的頁面</a><br />
+                            範例下載: <a class="small" href="https://github.com/mch0520/your-repo" target="_blank">Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
 
-        <div class="card" style="margin-top:12px">
-          <h3 style="margin-top:0">信任建立（初學者策略）</h3>
-          <ol class="small">
-            <li>提供小型低價試做（$5–$20）換評價</li>
-            <li>將範例放 GitHub，提供可運行 Demo</li>
-            <li>快速回覆、提供工作日誌/截圖</li>
-          </ol>
-        </div>
-      </aside>
+        <footer>
+            <div class="small">© <span id="year"></span> Jauson Chang • 聯絡 functionkk@gmail.com • 使用 GitHub Pages /
+                Netlify 上線</div>
+        </footer>
     </div>
 
-    <footer>
-      <div class="small">© <span id="year"></span> 你的名字 • 聯絡 email@example.com • 使用 GitHub Pages / Netlify 上線</div>
-    </footer>
-  </div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  // 小提醒：在正式上線前，請把 Formspree action 換為你自己的 endpoint
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    // 可加入簡單驗證或 GA 追蹤
-    setTimeout(()=>alert('感謝！我會盡快回覆。'), 120);
-  });
-</script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            setTimeout(() => alert('感謝！我會盡快回覆。'), 120);
+        });
+    </script>
 </body>
+
 </html>
 <small>© 2025 Studio Portfolio — All rights reserved.</small>
-
